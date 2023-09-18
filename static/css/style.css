@@ -1,0 +1,111 @@
+/* 
+Structure of a CSS selector
+
+selector {
+  key: value;
+}
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: antiquewhite;
+	background-image: radial-gradient(
+		circle,
+		rgba(29, 73, 204, 0.25) 4px,
+		transparent 0
+	);
+	background-repeat: repeat;
+	background-size: 50px 50px;
+	animation: dotScroll 4s linear infinite;
+}
+
+@keyframes dotScroll {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 50px 50px;
+	}
+}
+/* header {
+  background-image: url(https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+  height: 357px;
+  background-position: center;
+  background-size: cover;
+} */
+header {
+	background-image: url(https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+	height: 300px;
+	background-position: center;
+	/* 
+  contain
+  cover
+  */
+	background-size: cover;
+}
+h1 {
+	color: rgb(255, 0, 120);
+	color: #ff0000;
+	color: hsl(120 50% 30%);
+}
+
+#main-title {
+	font-family: sans-serif;
+}
+
+div.box {
+	height: 100px;
+	aspect-ratio: 1;
+	border-radius: 8px;
+	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+	/* padding-left: 50px; */
+	/* padding: 10px 20px 15px; */
+	padding: 10px;
+	margin: 20px;
+	border: 4px dotted black;
+	transition: all 2s ease-in-out;
+}
+
+div.box:hover {
+	scale: 2;
+	background-color: aqua;
+}
+
+#rotate {
+	/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+	animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+	from {
+		rotate: 0deg;
+	}
+	to {
+		rotate: 359deg;
+	}
+}
+
+@media (prefers-reduced-motion) {
+	#rotate {
+		animation-duration: 4s;
+	}
+}
+
+.red {
+	background-color: red;
+}
+.blue {
+	background-color: dodgerblue;
+}
+.purple {
+	background-color: purple;
+}
+
+main {
+	max-width: 80%;
+	/* text-align: center; */
+	margin: 0 auto;
+}
